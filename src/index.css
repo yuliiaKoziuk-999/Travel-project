@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'TradeGothic LT Extended', 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #112211;
+  --color-ink-soft: #1c1b1f;
+  --color-mint: #8dd3bb;
+  --color-mint-light: #cdeae1;
+  --color-mint-tint: rgb(141 211 187 / 0.4);
+  --color-surface: #fafbfc;
+  --color-star: #ffc107;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-surface);
+  }
+}
