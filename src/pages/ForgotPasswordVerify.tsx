@@ -14,7 +14,7 @@ export default function ForgotPasswordVerify() {
         Back to login
       </Link>
 
-      <h1 className="mt-4 font-display text-4xl font-bold text-ink">Verify code</h1>
+      <h1 className="mt-4 font-display text-[40px] font-bold text-ink">Verify code</h1>
       <p className="mt-2 text-base text-ink">
         An authentication code has been sent to your email.
       </p>

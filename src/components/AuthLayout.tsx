@@ -8,8 +8,11 @@ type Props = PropsWithChildren<{
 }>
 
 export default function AuthLayout({ children, imageSide = 'right' }: Props) {
+  const formWidth = imageSide === 'left' ? 'lg:w-[57%]' : 'lg:w-[45%]'
+  const imageWidth = imageSide === 'left' ? 'lg:w-[43%]' : 'lg:w-[55%]'
+
   const image = (
-    <div className="relative hidden overflow-hidden rounded-[30px] lg:block lg:w-[45%]">
+    <div className={`relative hidden overflow-hidden rounded-[30px] lg:block ${imageWidth}`}>
       <img src={authHero} alt="" className="h-full w-full object-cover" />
       <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
       <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-2">
@@ -31,7 +34,7 @@ export default function AuthLayout({ children, imageSide = 'right' }: Props) {
           imageSide === 'left' ? 'lg:flex-row-reverse' : ''
         }`}
       >
-        <div className="w-full lg:w-[55%]">{children}</div>
+        <div className={`w-full ${formWidth}`}>{children}</div>
         {image}
       </div>
     </div>

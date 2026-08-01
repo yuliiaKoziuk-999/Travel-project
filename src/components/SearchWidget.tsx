@@ -55,13 +55,19 @@ export default function SearchWidget() {
         </button>
       </div>
 
-      <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div
+        className={`mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 ${
+          tab === 'flights'
+            ? 'lg:[grid-template-columns:324fr_140fr_324fr_324fr]'
+            : 'lg:grid-cols-3'
+        }`}
+      >
         {fields.map((field) => (
           <label
             key={field.label}
-            className="relative flex h-14 items-center rounded border border-black/10 px-4"
+            className="relative flex h-14 items-center rounded border border-input-border px-4"
           >
-            <span className="absolute -top-2.5 left-4 bg-white px-1 text-xs font-normal text-ink-soft">
+            <span className="absolute -top-2.5 left-4 bg-white px-1 text-sm font-normal text-ink-soft">
               {field.label}
             </span>
             <input

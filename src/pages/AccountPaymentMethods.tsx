@@ -19,9 +19,9 @@ export default function AccountPaymentMethods() {
           <AccountProfileHeader active="/account/payment-methods" />
 
           <div className="mt-10 pb-16">
-            <h1 className="font-display text-3xl font-bold text-ink">Payment methods</h1>
+            <h1 className="font-display text-[32px] font-bold text-ink">Payment methods</h1>
 
-            <div className="mt-6 flex flex-wrap gap-6 rounded-[24px] bg-white p-8">
+            <div className="mt-6 flex flex-wrap gap-6 rounded-[24px] bg-white p-6">
               <CreditCardVisual />
 
               <button

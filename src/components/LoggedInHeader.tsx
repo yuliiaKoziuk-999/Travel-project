@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logoDark from '../assets/icons/logo-nav-dark.svg'
 import iconPlane from '../assets/icons/icon-plane.svg'
 import iconBed from '../assets/icons/icon-bed.svg'
@@ -7,18 +7,20 @@ import iconArrowDown from '../assets/icons/icon-arrow-down-small.svg'
 import avatarJohn from '../assets/img/avatar-john.jpg'
 
 export default function LoggedInHeader() {
+  const { pathname } = useLocation()
+
   return (
     <header className="bg-white px-4 py-6 sm:px-8">
       <nav className="relative flex items-center justify-between">
         <ul className="hidden items-center gap-6 md:flex">
-          <li className="border-b-2 border-mint pb-1">
+          <li className={`pb-1 ${pathname.startsWith('/flights') ? 'border-b-2 border-mint' : ''}`}>
             <Link to="/flights" className="flex items-center gap-2 text-sm font-semibold text-ink">
               <img src={iconPlane} alt="" className="h-6 w-6" />
               Find Flight
             </Link>
           </li>
-          <li>
-            <Link to="/hotels" className="flex items-center gap-2 border-b-2 border-mint pb-1 text-sm font-semibold text-ink">
+          <li className={`pb-1 ${pathname.startsWith('/hotels') ? 'border-b-2 border-mint' : ''}`}>
+            <Link to="/hotels" className="flex items-center gap-2 text-sm font-semibold text-ink">
               <img src={iconBed} alt="" className="h-6 w-6" />
               Find Stays
             </Link>
@@ -30,7 +32,7 @@ export default function LoggedInHeader() {
         </Link>
 
         <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 border-b-2 border-mint pb-1">
+          <div className="flex items-center gap-2">
             <a href="#" className="flex items-center gap-2 text-sm font-semibold text-ink">
               <img src={iconHeart} alt="" className="h-6 w-6" />
               Favourites

@@ -12,7 +12,7 @@ export default function Login() {
 
   return (
     <AuthLayout imageSide="right">
-      <h1 className="font-display text-4xl font-bold text-ink">Login</h1>
+      <h1 className="font-display text-[40px] font-bold text-ink">Login</h1>
       <p className="mt-2 text-base text-ink">Login to access your Golobe account</p>
 
       <form className="mt-8 flex flex-col gap-4">

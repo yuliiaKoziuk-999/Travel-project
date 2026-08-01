@@ -6,7 +6,7 @@ import iconPen from '../assets/icons/icon-pen.svg'
 
 const tabs = [
   { label: 'Account', to: '/account' },
-  { label: 'History', to: '/account/history' },
+  { label: 'Tickets/Bookings', to: '/account/history' },
   { label: 'Payment methods', to: '/account/payment-methods' },
 ]
 

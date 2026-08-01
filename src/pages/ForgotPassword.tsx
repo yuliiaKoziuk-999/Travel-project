@@ -14,7 +14,7 @@ export default function ForgotPassword() {
         Back to login
       </Link>
 
-      <h1 className="mt-4 font-display text-4xl font-bold text-ink">Forgot your password?</h1>
+      <h1 className="mt-4 font-display text-[40px] font-bold text-ink">Forgot your password?</h1>
       <p className="mt-2 text-base text-ink">
         Don't worry, happens to all of us. Enter your email below to recover your password
       </p>

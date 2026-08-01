@@ -36,7 +36,7 @@ export default function Footer() {
               Subscribe Newsletter
             </h2>
             <div className="mt-8">
-              <p className="font-display text-lg font-bold text-ink">The Travel</p>
+              <p className="font-display text-xl font-bold text-ink">The Travel</p>
               <p className="mt-2 text-base font-medium text-ink">
                 Get inspired! Receive travel discounts, tips and behind the scenes stories.
               </p>

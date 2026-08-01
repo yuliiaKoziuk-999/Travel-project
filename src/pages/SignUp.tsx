@@ -13,7 +13,7 @@ export default function SignUp() {
 
   return (
     <AuthLayout imageSide="left">
-      <h1 className="font-display text-4xl font-bold text-ink">Sign up</h1>
+      <h1 className="font-display text-[40px] font-bold text-ink">Sign up</h1>
       <p className="mt-2 text-base text-ink">
         Let's get you all set up so you can access your personal account.
       </p>
@@ -29,9 +29,22 @@ export default function SignUp() {
           <AuthTextField label="First Name" defaultValue="John" className="flex-1" />
           <AuthTextField label="Last Name" defaultValue="Doe" className="flex-1" />
         </div>
-        <AuthTextField label="Email" defaultValue="john.doe@gmail.com" type="email" />
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <AuthTextField label="Email" defaultValue="john.doe@gmail.com" type="email" className="flex-1" />
+          <AuthTextField label="Phone Number" defaultValue="john.doe@gmail.com" className="flex-1" />
+        </div>
         <AuthTextField
           label="Password"
+          type={showPassword ? 'text' : 'password'}
+          defaultValue="password123"
+          trailing={
+            <button type="button" onClick={() => setShowPassword((v) => !v)} aria-label="Toggle password visibility">
+              <img src={showPassword ? iconEye : iconEyeOff} alt="" className="h-6 w-6" />
+            </button>
+          }
+        />
+        <AuthTextField
+          label="Confirm Password"
           type={showPassword ? 'text' : 'password'}
           defaultValue="password123"
           trailing={

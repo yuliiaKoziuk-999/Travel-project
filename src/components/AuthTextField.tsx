@@ -7,8 +7,8 @@ type Props = InputHTMLAttributes<HTMLInputElement> & {
 
 export default function AuthTextField({ label, trailing, className, ...inputProps }: Props) {
   return (
-    <label className={`relative flex h-14 items-center rounded border border-black/30 px-4 ${className ?? ''}`}>
-      <span className="absolute -top-2.5 left-4 bg-white px-1 text-xs font-normal text-ink-soft">
+    <label className={`relative flex h-14 items-center rounded border border-input-border px-4 ${className ?? ''}`}>
+      <span className="absolute -top-2.5 left-4 bg-white px-1 text-sm font-normal text-ink-soft">
         {label}
       </span>
       <input

@@ -16,7 +16,7 @@ export default function SignUpPayment() {
         Back
       </Link>
 
-      <h1 className="mt-4 font-display text-4xl font-bold text-ink">Add a payment method</h1>
+      <h1 className="mt-4 font-display text-[40px] font-bold text-ink">Add a payment method</h1>
       <p className="mt-2 text-base text-ink">
         Let's get you all set up so you can access your personal account.
       </p>
@@ -34,8 +34,8 @@ export default function SignUpPayment() {
           trailing={<img src={iconVisa} alt="" className="h-6 w-6" />}
         />
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AuthTextField label="Expiry Date" placeholder="MM/YY" className="flex-1" />
-          <AuthTextField label="CVC" className="flex-1" />
+          <AuthTextField label="Exp. Date" defaultValue="02/27" className="flex-1" />
+          <AuthTextField label="CVC" defaultValue="123" className="flex-1" />
         </div>
         <AuthTextField label="Name on Card" defaultValue="John Doe" />
         <AuthTextField

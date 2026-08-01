@@ -24,7 +24,7 @@ export default function Account() {
           <AccountProfileHeader active="/account" />
 
           <div className="mt-10 pb-16">
-            <h1 className="font-display text-3xl font-bold text-ink">Account</h1>
+            <h1 className="font-display text-[32px] font-bold text-ink">Account</h1>
 
             <div className="mt-6 flex flex-col divide-y divide-[#D7E2EE] rounded-2xl bg-white px-8">
               {fields.map((field) => (

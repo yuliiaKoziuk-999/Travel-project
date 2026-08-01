@@ -12,6 +12,7 @@
   --color-mint-tint: rgb(141 211 187 / 0.4);
   --color-surface: #fafbfc;
   --color-star: #ffc107;
+  --color-input-border: #79747e;
 }
 
 @layer base {
